@@ -1,27 +1,43 @@
 # Pokedex
+Este é um projeto de uma Pokédex simples desenvolvida em Angular. Permite aos usuários explorar informações sobre diferentes Pokémon.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+## Funcionalidades
 
-## Development server
+- Lista de Pokémon com detalhes como nome, tipo, altura e peso;
+- Pesquisa de Pokémon por nome ou número (sendo implementado);
+- Exibição detalhada de informações sobre um Pokémon específico.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Pré-requisitos
 
-## Code scaffolding
+Antes de começar, certifique-se de que você tenha instalado as seguintes ferramentas:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Node.js - O Angular requer o Node.js para ser executado.
+Angular CLI - Uma interface de linha de comando para o Angular.
 
-## Build
+## Uso
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para iniciar o servidor de desenvolvimento do Angular e visualizar a Pokédex, execute o seguinte comando:
 
-## Running unit tests
+```
+ng serve
+```
+Abra seu navegador e acesse http://localhost:4200/ para ver a Pokédex em ação.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contribuindo
 
-## Running end-to-end tests
+Se você deseja contribuir para este projeto, siga estas etapas:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Fork este repositório.
+- Crie uma branch para sua contribuição: git checkout -b feature/nova-funcionalidade.
+- Faça suas alterações e commit: git commit -m 'Adiciona nova funcionalidade'.
+- Envie suas alterações: git push origin feature/nova-funcionalidade.
+- Abra uma solicitação pull request.
 
-## Further help
+## Autor
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Bruno Lafayette
+
+## Agradecimentos
+
+Agradecimentos especiais à PokeAPI por fornecer os dados dos Pokémon.
+
