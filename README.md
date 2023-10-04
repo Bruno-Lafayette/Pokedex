@@ -3,9 +3,9 @@ Este é um projeto de uma Pokédex simples desenvolvida em Angular. Permite aos 
 
 ## Funcionalidades
 
-Lista de Pokémon com detalhes como nome, tipo, altura e peso.
-Pesquisa de Pokémon por nome ou número.
-Exibição detalhada de informações sobre um Pokémon específico.
+- Lista de Pokémon com detalhes como nome, tipo, altura e peso;
+- Pesquisa de Pokémon por nome ou número (sendo implementado);
+- Exibição detalhada de informações sobre um Pokémon específico.
 
 ## Pré-requisitos
 
