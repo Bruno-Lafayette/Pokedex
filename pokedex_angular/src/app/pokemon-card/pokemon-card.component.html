@@ -1,0 +1,95 @@
+<div class="card" (click)="showModal()" [style.background-color]="corDeFundoMapping[pokemon.types[0].type.name]">
+    <div class="header">
+        <p class="id">#{{getID(pokemon.id)}}</p>
+        <p class="type">{{pokemon.types[0].type.name}}</p>
+    </div>
+    <img class="image" src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif" [alt]="pokemon.name">
+    <p class="name">{{pokemon.name}}</p>
+</div>
+
+<ng-container *ngIf="show">
+    <div class="modal" [style.background-color]="corDeFundoMapping[pokemon.types[0].type.name]">
+        <div class="pokemon">
+            <img class="imagePokemon" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{getID(pokemon.id)}}.png" [alt]="pokemon.name">
+            
+            <div class="namePokemon">
+                <p>#{{getID(pokemon.id)}}</p>
+                <p>{{pokemon.name}}</p>
+                <!-- <p>{{pokemon.types[0].type.name}}</p> -->
+            </div>
+
+        </div>
+        <div class="detail">
+            <p class="title">DESCRIPTION</p>
+            <svg class="titleRect"> <rect x="0" y="0" width="72" height="5" [attr.fill]="corDeFundoMapping[pokemon.types[0].type.name]" /></svg>
+            <p class="text">{{pokemon.description}}</p>
+
+            <p class="title">CARACTERISTIQUES</p>
+            <svg class="titleRect"> <rect x="0" y="0" width="102" height="5" [attr.fill]="corDeFundoMapping[pokemon.types[0].type.name]" /></svg>
+
+            <div class="caracteristiques">
+                <div class="caracteristiquesItens">
+                    <p class="caracteristiquesName">Female</p>
+                    <p class="caracteristiquesValue">50%</p>
+                </div>
+                <div class="caracteristiquesItens">
+                    <p class="caracteristiquesName">Male</p>
+                    <p class="caracteristiquesValue">50%</p>
+                </div>
+                <div class="caracteristiquesItens">
+                    <p class="caracteristiquesName">Weight</p>
+                    <p class="caracteristiquesValue">{{pokemon.weight}}Kg</p>
+                </div>
+                <div class="caracteristiquesItens">
+                    <p class="caracteristiquesName">Height</p>
+                    <p class="caracteristiquesValue">{{pokemon.height}}m</p>
+                </div>
+            </div>
+
+            <div class="containerTalent" *ngFor="let p of pokemon.abilities; let i = index">
+                <ng-container>
+                    <p class="talent">Talent nº{{i+1}}: <span [style.color]="corDeFundoMapping[pokemon.types[0].type.name]">{{p.ability.name}}</span></p>
+                </ng-container>
+            </div>
+
+            <p class="title">STATS</p>
+            <svg class="titleRect"> <rect x="0" y="0" width="32" height="5" [attr.fill]="corDeFundoMapping[pokemon.types[0].type.name]" /></svg>
+        
+            <div class="stats">
+                <p class="statsName">HP</p>
+                <progress id="minha-barra-de-progresso" [value]="pokemon.stats[0].base_stat" max="120"></progress>
+                <p class="statsValue">{{pokemon.stats[0].base_stat}}</p>
+            </div>
+            <div class="stats">
+                <p class="statsName">ATK</p>
+                <progress [value]="pokemon.stats[1].base_stat" max="120"></progress>
+                <p class="statsValue">{{pokemon.stats[1].base_stat}}</p>
+            </div>
+            <div class="stats">
+                <p class="statsName">DEF</p>
+                <progress [value]="pokemon.stats[2].base_stat" max="120"></progress>
+                <p class="statsValue">{{pokemon.stats[2].base_stat}}</p>
+            </div>
+            <div class="stats">
+                <p class="statsName">SATK</p>
+                <progress [value]="pokemon.stats[3].base_stat" max="120"></progress>
+                <p class="statsValue">{{pokemon.stats[3].base_stat}}</p>
+
+            </div>
+            <div class="stats">
+                <p class="statsName">SDEF</p>
+                <progress [value]="pokemon.stats[4].base_stat" max="120"></progress>
+                <p class="statsValue">{{pokemon.stats[4].base_stat}}</p>
+            </div>
+            <div class="stats">
+                <p class="statsName">SPD</p>
+                <progress [value]="pokemon.stats[5].base_stat" max="120"></progress>
+                <p class="statsValue">{{pokemon.stats[5].base_stat}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" (click)="showModal()"></div>
+</ng-container>
+
+
+

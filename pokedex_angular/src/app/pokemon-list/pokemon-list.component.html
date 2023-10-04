@@ -1,0 +1,11 @@
+<div class="card-conteiner">
+    <app-pokemon-card class="card" 
+    *ngFor="let pokemon of pokemons;" 
+    [pokemon]="pokemon"
+    ></app-pokemon-card>
+</div>
+
+
+
+<button class="buttonShowMore" (click)="nextPage()">Ver Mais</button>
+

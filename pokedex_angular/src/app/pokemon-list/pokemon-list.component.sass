@@ -1,0 +1,31 @@
+$base-color: #c6538c
+
+.card-conteiner
+    display: flex /* Use flexbox para alinhar os cards lado a lado */
+    flex-wrap: wrap /* Permita que os cards quebrem para a próxima linha quando não houver espaço suficiente na largura da tela */
+    gap: 10px /* Adicione um espaçamento entre os cards */   
+    .list app-pokemon-list
+    justify-content: center 
+
+
+.card 
+    border-radius: 15px
+    height: 160px
+    width: 130px
+
+.buttonShowMore
+    border-radius: 15px
+    background-image: radial-gradient(circle at -16.07% 44.22%, #b0c171 0, #a4c477 3.33%, #98c67d 6.67%, #8cc885 10%, #7fca8e 13.33%, #71cb97 16.67%, #63cda1 20%, #53cdac 23.33%, #42ceb7 26.67%, #2dcec1 30%, #0fcecc 33.33%, #00ced6 36.67%, #00cde0 40%, #00cce9 43.33%, #00cbf1 46.67%, #10c9f8 50%, #32c7fe 53.33%, #4bc5ff 56.67%, #60c2ff 60%, #74bfff 63.33%, #87bbff 66.67%, #99b8ff 70%)
+    color: white
+    height: 40px
+    width: 130px
+    border: none
+    font-size: 16px
+    margin: 2%
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2)
+
+.buttonShowMore:active
+    transform: scale(0.98)
+            /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24)
+            /* Lowering the shadow */
