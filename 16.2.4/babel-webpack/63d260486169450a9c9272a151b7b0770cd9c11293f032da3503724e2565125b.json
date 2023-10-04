@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {};\nexport const API_PATH = \"https://pokeapi.co/api/v2/\";","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
